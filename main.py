@@ -7,6 +7,7 @@ app = FastAPI()
 
 origins = [
     "http://localhost:5173", 
+    "https://credit-card-fraud-frontend-ruby.vercel.app"
 ]
 app.add_middleware(
     CORSMiddleware,
