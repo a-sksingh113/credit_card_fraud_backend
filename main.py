@@ -21,7 +21,7 @@ app.add_middleware(
 def root():
     return {"message": "Credit Card Fraud Detection API"}
 
-@app.post("/predict")
+@app.post("/predict2")
 def predict(data: TransactionData):
     result = predict_transaction(data.features)
     return {"prediction": "Fraud" if result == 1 else "Not Fraud"}
