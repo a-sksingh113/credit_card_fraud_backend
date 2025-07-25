@@ -5,13 +5,13 @@ from model.predict import predict_transaction
 
 app = FastAPI()
 
-origins = [
-    "http://localhost:5173", 
-    "https://credit-card-fraud-frontend-ruby.vercel.app"
-]
+# origins = [
+#     "http://localhost:5173", 
+#     "https://credit-card-fraud-frontend-ruby.vercel.app"
+# ]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,  
+   allow_origin_regex=".*", 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
